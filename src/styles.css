@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --hub: #0F6E56;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #F6F8F7;
+  color: #1F2A28;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+  color: var(--hub);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #D9E2E0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.btn {
+  background: var(--hub);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secundario {
+  background: #fff;
+  color: #B3261E;
+  border: 1px solid #B3261E;
+}
+
+.error {
+  background: #FBEAE9;
+  border: 1px solid #B3261E;
+  color: #B3261E;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.input,
+select,
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #D9E2E0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  background: #fff;
+  color: #1F2A28;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.tabla td,
+.tabla th {
+  padding: 8px 6px;
+  border-bottom: 1px solid #D9E2E0;
+  text-align: left;
+}
+
+.precio-final {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--hub);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #E9F4F0;
+  color: #094637;
+  font-weight: 600;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 16px 12px 48px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
